@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arkademy</title>
+    <script>
+        function validate() {
+        var email = form1.username.value;
+        var user = /^[a-z0-9_]+$/;
+        if (!user.test(email)) {
+            alert('Silakan Masukkan Username Yang Benar Dengan format Huruf Kecil dan Underscore');
+            return false;
+        } 
+
+        var password = form1.password.value;
+        var pw = /^[a-zA-Z0-9]+$/;
+        if (!pw.test(password)) {
+        alert('Silakan Masukkan Password Dengan Format Yang Benar');
+        } else {
+        alert('Data Berhasil Disimpan')
+        return true;
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <h2>Enter your Name and Submit</h2>
+    <form name="form1" action="#">
+        <p>Username</p>
+        <input type='text' name='username' />
+        <br>
+        <p>Password</p>
+        <input type='password' name='password' />
+        <br>
+        <input type="submit" name="submit" value="Submit" onclick="return validate(this)" />
+    </form>
+</body>
+
+</html>
